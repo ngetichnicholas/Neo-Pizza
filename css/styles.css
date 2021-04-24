@@ -22,11 +22,26 @@
 .fs40 {
   font-size: 40px;
 }
+.fs50 {
+  font-size: 50px;
+
+}
 #logo {
   width: 20%;
-  height: 20%;
-  margin: 40px 40% 5px 40%;
+  height: auto;
+  margin: 160px 40% 5px 40%;
   border-radius: 50%;
+}
+#slogan {
+  margin-top: 50px;
+}
+#header {
+  background-image: url("../assets/backgrounds/pizza10.jpg");
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
 }
 @media (min-width: 1200px) {
   .container{
