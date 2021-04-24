@@ -25,15 +25,25 @@ $(document).ready(function() {
       let crustCost = 300;
     }
 
+    if (topping == "Mushroom") {
+      let toppingCost = 150;
+    }
+    else if (topping == "Sausage") {
+      let toppingCost = 200;
+    }
+    else if (topping == "Green Pepper") {
+      let toppingCost = 250;
+    }
+
     
     if (size == "Small") {
-      let topping = topping*1.5;
+      let toppingCost = toppingCost*1.5;
     }
     else if (size == "Medium") {
-      let topping = topping*2;
+      let toppingCost = toppingCost*2;
     }
     else if (size == "Large" ) {
-      let topping = topping*2.5
+      let toppingCost = toppingCost*2.5
     }
   });
 });
