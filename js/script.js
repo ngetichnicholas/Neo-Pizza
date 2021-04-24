@@ -13,35 +13,37 @@ $(document).ready(function() {
     let size = $("#size").val();
     let crust = $("#crust").val();
     let topping = $("#topping").val();
+    let toppingCost = 0;
+    let crustCost = 0;
 
     if (crust == "Crispy") {
-      let crustCost = 200;
+      crustCost = crustCost + 200;
     }
     else if (crust == "Stuffed") {
-      let crustCost = 250;
+      crustCost =crustCost + 250;
     }
     else if (crust == "Gluten-free") {
-      let crustCost = 300;
+      crustCost =crustCost + 300;
     }
 
     if (topping == "Mushroom") {
-      let toppingCost = 150;
+      toppingCost =toppingCost + 150;
     }
     else if (topping == "Sausage") {
-      let toppingCost = 200;
+      toppingCost =toppingCost + 200;
     }
     else if (topping == "Green Pepper") {
-      let toppingCost = 250;
+      toppingCost = toppingCost + 250;
     }
 
     if (size == "Small") {
-      let toppingCost = toppingCost*1.5;
+      toppingCost = toppingCost*1.5;
     }
     else if (size == "Medium") {
-      let toppingCost = toppingCost*2;
+      toppingCost = toppingCost*2;
     }
     else if (size == "Large" ) {
-      let toppingCost = toppingCost*2.5
+      toppingCost = toppingCost*2.5
     }
 
     let newOrder = new Pizza(crustCost,toppingCost);
