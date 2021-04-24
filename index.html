@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,50 @@
   <link rel="icon" type="image/jpg" href="assets/logo/logo.jpg">
   <title>Neo-Pizza || Prep IP4</title>
 </head>
+
 <body>
   <div class="container">
-
+    <form id="frm">
+      <div class="form-group">
+        <label>Size</label><br>
+        <select name="size">
+          <option value="small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select><br>
+      </div>
+      <label>Pizza</label><br>
+      <select name="Type"><br>
+        <option value="Chicken Barbercue">Chicken Barbercue</option>
+        <option value="Beef sauce">Beef sauce</option>
+        <option value="Mushroons">Mushroons</option>
+      </select><br>
+      <input class="form-control" name="price" type="text" placeholder="Price" /><br>
+      <label>QTY</label><br>
+      <input name="qty" type="number" value="1" min="1" /><br>
+      <button class="btn btn-warning" type="submit">Add to cart</button>
+    </form>
+    <button class="btn btn-success" id="view-order">View Order Summary</button>
+    <p id="order-summary"></p>
+    <table class="table table-sm text-small">
+      <tr>
+        <th>Pizza</th>
+        <th>Size</th>
+        <th>QTY</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+      <tbody id="our-order">
+      </tbody>
+      <tfoot class="text-right">
+        <tr class="text-right">
+          <td colspan="4" id="total"></td>
+        </tr>
+      </tfoot>
+    </table>
   </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='MMERGE3';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/script.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -1,47 +1,36 @@
-$(document).ready(function() {  
-  $(".icon").click(function(){
-    $(this).toggle();
-    $(this).siblings().toggle();
-  });
-  $(".info").click(function(){
-    $(this).siblings().toggle();
-    $(this).toggle();
-  });
-  $(".portfolio").hover(
-    function () {
-      $(this).addClass("fade-portfolio-image");
-      $(this).children(".name").show();
-    },
-    function () {
-      $(this).removeClass("fade-portfolio-image");
-      $(this).children(".name").hide();
-
-    }
-  );
-  $("#mc-embedded-subscribe-form").submit(function(event) {
-    let userName = $("#mce-FNAME").val();
-    let userEmail =$("#mce-EMAIL").val();
-    let userMessage =$("#mce-MMERGE3").val();
-
-  if (userName.length === 0 ) {
-    alert("Enter your name before submitting!");
-    throw new Error;  //Abort javascript execution from here
-  }
-  else if (userEmail.length === 0) {
-    alert("Enter your email address before submitting!");
-    throw new Error;  //Abort javascript execution from here
-  }
-  else if (userMessage.length === 0) {
-    alert("Enter your message or comment before submitting!");
-    throw new Error;  //Abort javascript execution from here
-  }
-  else {
-    alert("Hello " +userName +", we have received your message. Thank you for reaching out to us.")
-  }
-  $("#mce-responses").show();
+const frm = document.querySelector('#frm');
+const btnViewOrder = document.querySelector("#view-order");
+const tot = document.querySelector("#total");
+let cart = [];
+frm.addEventListener("submit", function(event){
   event.preventDefault();
-  let form = document.getElementsByName("mc-embedded-subscribe-form")[0]; 
-  form.reset();  // Clear form fields
-  return false; // Prevent page refresh 
-  })
+  const fd = new FormData(frm);
+  let order = {};
+  for (const key of fd.keys()) {
+    if(fd.get(key).toString().length > 0){
+      order[key]  = fd.get(key).toString();
+    }
+  }
+  order["total"] = parseInt(order["qty"] * order["price"]);
+  cart.push(order);
+  if(confirm("This pizza will be added to your cart")){
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+});
+btnViewOrder.addEventListener('click', function(){
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  if(cart.length > 0){
+    document.querySelector("#our-order").innerHTML = "";
+    cart.forEach(element => {
+      document.querySelector("#our-order").innerHTML += `<tr>
+      <td>${element['Type']}</td>
+      <td>${element['size']}</td>
+      <td>${element['qty']}</td>
+      <td>${element['price']}</td>
+      <td>${parseInt(element['price']) * parseInt(element['qty'])}</td>
+      </tr>`;
+    });
+    const total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
+    tot.innerHTML = "Total "+ total.toString();
+  }
 });
