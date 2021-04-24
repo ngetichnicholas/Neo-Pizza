@@ -51,9 +51,11 @@
       max-width: 90%;
   }
 }
-
+h2 {
+  text-align: center;
+}
 form {
-  margin: 10px 20% 10px 20%;
+  margin: 10px;
   align-items: center;
 }
 #mce-responses {
