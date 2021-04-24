@@ -5,7 +5,7 @@ function Pizza(size ,crust,topping) {
   this.topping = topping;
 }
 Pizza.prototype.order = function() {
-  return this.size + this.crust + this.topping;
+  return this.crust + this.topping;
 } 
 
 $(document).ready(function() {
@@ -14,5 +14,16 @@ $(document).ready(function() {
     let size = $("#size").val();
     let crust = $("#crust").val();
     let topping = $("#topping").val();
+
+    
+    if (size == "Small") {
+      let topping = topping*1.5;
+    }
+    else if (size == "Medium") {
+      let topping = topping*2;
+    }
+    else if (size == "Large" ) {
+      let topping = topping*2.5
+    }
   });
 });
