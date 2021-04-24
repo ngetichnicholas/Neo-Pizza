@@ -4,3 +4,6 @@ function Pizza(size ,crust,topping) {
   this.crust = crust;
   this.topping = topping;
 }
+Pizza.prototype.order = function() {
+  return this.size + this.crust + this.topping;
+} 
