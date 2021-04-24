@@ -7,6 +7,8 @@ Pizza.prototype.order = function() {
   return this.crustCost + this.toppingCost;
 } 
 
+
+//User Interface Logic
 $(document).ready(function() {
   $("#order").click(function(event) {
     event.preventDefault();
@@ -47,6 +49,8 @@ $(document).ready(function() {
     }
 
     let newOrder = new Pizza(crustCost,toppingCost);
+
+   // $("#user").text("Account Name: " + userName);
 
     $("#total").text(newOrder.order());
   });
