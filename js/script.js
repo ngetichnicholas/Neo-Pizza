@@ -4,8 +4,9 @@ function Pizza(crust, topping) {
   this.toppingCost = topping;
 }
 Pizza.prototype.myOrder = function () {
-  result = this.crustCost + this.toppingCost;
-  return result;
+   result = this.crustCost + this.toppingCost;
+   return result;
+  
 }
 
 
@@ -49,13 +50,15 @@ $(document).ready(function () {
 
     let newOrder = new Pizza(crustCost, toppingCost);
     let fd = new FormData(orderForm);
-    let order = {};
+    let order = {}
     for (let key of fd.keys()) {
       if (fd.get(key).toString().length > 0) {
         order[key] = fd.get(key).toString();
       }
     }
-    order["total"] = newOrder.myOrder();
+    order.toppingCost=toppingCost;
+    order.crustCost=crustCost;
+    order["total"] = (order["toppingCost"] + order["crustCost"]);
     cart.push(order);
     if (confirm("Confirm you want to add this pizza to your cart")) {
       localStorage.setItem("cart", JSON.stringify(cart));
@@ -71,12 +74,13 @@ $(document).ready(function () {
       <td>${element['size']}</td>
       <td>${element['crust']}</td>
       <td>${element['topping']}</td>
-      <td>${result}</td>
+      <td>${(element['toppingCost']) + (element['crustCost'])}</td>
       </tr>`;
       });
-      let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
-      tot.innerHTML = "Total " + total.toString();
+
     }
+    let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
+    tot.innerHTML = "Total " + total.toString();
   });
 
 });
