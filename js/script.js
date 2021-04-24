@@ -24,6 +24,10 @@ $(document).ready(function () {
     let toppingCost = 0;
     let crustCost = 0;
 
+    if (size.length === 0 || crust.length === 0 || topping.length === 0 ) {
+      alert("Select from all the fiels before adding to cart!!! ")
+      throw new Error;
+    }
     if (crust == "Crispy") {
       crustCost = crustCost + 200;
     } else if (crust == "Stuffed") {
@@ -62,7 +66,7 @@ $(document).ready(function () {
     cart.push(order);
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Your selection have been successfuly added to cart.")
-    $("#checkOrder, #order-message, #orderTable").show();
+    $("#checkOrder, #order-message").show();
   });
 
   checkOrder.addEventListener('click', function () {
@@ -80,6 +84,8 @@ $(document).ready(function () {
       });
 
     }
+    $("#orderTable").show();
+    $(".banner").hide();
     let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
     tot.innerHTML = "Grand Total Ksh " + total.toString();
   });

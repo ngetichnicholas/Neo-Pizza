@@ -34,14 +34,15 @@
       </div>
     </div>
     <div id="pizzaOrder">
+      <p class="alert alert-success fs24" id="order-message">You can select multiple pizza collection as much as you need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...</p>
       <form id="orderForm">
-        <p class="alert alert-success" id="order-message">You can select multiple pizza collection as much as you need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...</p>
         <h2>Make a Quick Order</h2>
         <div class="row">
           <div class="col-md-3">
             <div class="form-group">
               <label>Size</label><br>
               <select id="size" class="form-control" name="size">
+                <option selected value="">Select Pizza Size</option>
                 <option value="Small">Small</option>
                 <option value="Medium">Medium</option>
                 <option value="Large">Large</option>
@@ -52,6 +53,7 @@
             <div class="form-group">
               <label>Crust</label><br>
               <select id="crust" class="form-control" name="crust"><br>
+                <option selected value="">Select Crust Type</option>
                 <option value="Crispy">Crispy</option>
                 <option value="Stuffed">Stuffed</option>
                 <option value="Gluten-free">Gluten-free</option>
@@ -60,8 +62,9 @@
           </div>
           <div class="col-md-3">
             <div class="form-group">
-              <label>Toping(s)</label><br>
+              <label>Topping(s)</label><br>
               <select id="topping" class="form-control" name="topping">
+                <option selected value="">Select Toping</option>
                 <option value="Mushroom">Mushroom</option>
                 <option value="Sausage">Sausage</option>
                 <option value="Green Pepper">Green Pepper</option>
@@ -69,27 +72,29 @@
             </div>
           </div>
           <div class="col-md-3">
-            <button class="btn btn-warning" type="submit" id="order">Add to cart</button>
+            <button class="btn btn-success" type="submit" id="orderButton">Add to cart</button>
           </div>
         </div>
       </form>
-      <button class="btn btn-success" id="checkOrder">View Cart</button>
+      <button class="btn btn-warning" id="checkOrder">View Cart</button>
     </div>
-    <table id="orderTable" class="table table-sm text-small">
-      <tr>
-        <th>Pizza Size</th>
-        <th>Crust</th>
-        <th>Topings</th>
-        <th>Total</th>
-      </tr>
-      <tbody id="customerOrder">
-      </tbody>
-      <tfoot class="text-right">
-        <tr class="text-right">
-          <td colspan="4" id="total"></td>
+    <div id="orderTable">
+      <table  class="table table-sm text-small">
+        <tr>
+          <th>Pizza Size</th>
+          <th>Crust</th>
+          <th>Topings</th>
+          <th>Total</th>
         </tr>
-      </tfoot>
-    </table>
+        <tbody id="customerOrder">
+        </tbody>
+        <tfoot class="text-right">
+          <tr class="text-right">
+            <td colspan="4" id="total"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   </div>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/script.js"></script>
