@@ -15,6 +15,16 @@ $(document).ready(function() {
     let crust = $("#crust").val();
     let topping = $("#topping").val();
 
+    if (crust == "Crispy") {
+      let crustCost = 200;
+    }
+    else if (crust == "Stuffed") {
+      let crustCost = 250;
+    }
+    else if (crust == "Gluten-free") {
+      let crustCost = 300;
+    }
+
     
     if (size == "Small") {
       let topping = topping*1.5;
