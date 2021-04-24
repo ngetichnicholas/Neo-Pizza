@@ -1,11 +1,10 @@
 //Business Logic
-function Pizza(size ,crust,topping) {
-  this.size = size;
-  this.crust = crust;
-  this.topping = topping;
+function Pizza(crust,topping) {
+  this.crustCost = crust;
+  this.toppingCost = topping;
 }
 Pizza.prototype.order = function() {
-  return this.crust + this.topping;
+  return this.crustCost + this.toppingCost;
 } 
 
 $(document).ready(function() {
@@ -35,7 +34,6 @@ $(document).ready(function() {
       let toppingCost = 250;
     }
 
-    
     if (size == "Small") {
       let toppingCost = toppingCost*1.5;
     }
@@ -45,5 +43,9 @@ $(document).ready(function() {
     else if (size == "Large" ) {
       let toppingCost = toppingCost*2.5
     }
+
+    let newOrder = new Pizza(crustCost,toppingCost);
+
+    $("#total").text(newOrder.order());
   });
 });
