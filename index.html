@@ -13,12 +13,12 @@
 
 <body>
   <div class="container">
-    <div id="header">
+    <!-- <div id="header">
       <div>
         <img id="logo" src="assets/logo/logo.jpg" alt="Logo">
       </div>
       <div class="fs50" id="slogan">Perfect has 7 letters. So does Pizzzza.</div>
-    </div>
+    </div> -->
     <div class="row banner">
       <div class="col-md-3">
         <img src="assets/backgrounds/pizza3.jpg" alt="" width="100%" height="100%">
@@ -40,47 +40,46 @@
           <div class="col-md-3">
             <div class="form-group">
               <label>Size</label><br>
-              <select class="form-control" name="size">
-                <option value="100">Small</option>
-                <option value="150">Medium</option>
-                <option value="200">Large</option>
+              <select id="size" class="form-control" name="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
               </select><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
               <label>Crust</label><br>
-              <select class="form-control" name="crust"><br>
-                <option value="250">Crispy</option>
-                <option value="200">Stuffed</option>
-                <option value="150">Gluten-free</option>
+              <select id="crust" class="form-control" name="crust"><br>
+                <option value="Crispy">Crispy</option>
+                <option value="Stuffed">Stuffed</option>
+                <option value="Gluten-free">Gluten-free</option>
               </select><br>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
               <label>Toping(s)</label><br>
-              <select class="form-control" name="toping">
-                <option value="300">Mushroom</option>
-                <option value="250">Sausage</option>
-                <option value="200">Green Pepper</option>
+              <select id="topping" class="form-control" name="toping">
+                <option value="Mushroom">Mushroom</option>
+                <option value="Sausage">Sausage</option>
+                <option value="Green Pepper">Green Pepper</option>
               </select><br>
             </div>
           </div>
           <div class="col-md-3">
-            <button class="btn btn-warning" type="submit">Add to cart</button>
+            <button class="btn btn-warning" id="order">Add to cart</button>
           </div>
         </div>
       </form>
-      <button class="btn btn-success" id="view-order">View Order Summary</button>
+      <button class="btn btn-success" id="view-order">View Order</button>
     </div>
     <p id="order-summary"></p>
     <table class="table table-sm text-small">
       <tr>
-        <th>Pizza</th>
-        <th>Size</th>
-        <th>QTY</th>
-        <th>Price</th>
+        <th>Pizza Size</th>
+        <th>Crust</th>
+        <th>Topings</th>
         <th>Total</th>
       </tr>
       <tbody id="our-order">
