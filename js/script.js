@@ -3,12 +3,12 @@ function Pizza(crust, topping) {
   this.crustCost = crust;
   this.toppingCost = topping;
 }
-Pizza.prototype.myOrder = function () {
-   result = this.crustCost + this.toppingCost;
-   return result;
-  
-}
 
+Pizza.prototype.myOrder = function () {
+  result = this.crustCost + this.toppingCost;
+  return result;
+
+}
 
 //User Interface Logic
 $(document).ready(function () {
@@ -56,19 +56,20 @@ $(document).ready(function () {
         order[key] = fd.get(key).toString();
       }
     }
-    order.toppingCost=toppingCost;
-    order.crustCost=crustCost;
+    order.toppingCost = toppingCost;
+    order.crustCost = crustCost;
     order["total"] = (order["toppingCost"] + order["crustCost"]);
     cart.push(order);
-    if (confirm("Confirm you want to add this pizza to your cart")) {
-      localStorage.setItem("cart", JSON.stringify(cart));
-    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert("Your selection have been successfuly added to cart.")
+    $("#checkOrder, #order-message, #orderTable").show();
   });
+
   checkOrder.addEventListener('click', function () {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (cart.length > 0) {
       document.querySelector("#customerOrder").innerHTML = "";
-      cart.forEach(element => { 
+      cart.forEach(element => {
 
         document.querySelector("#customerOrder").innerHTML += `<tr>
       <td>${element['size']}</td>
@@ -80,7 +81,7 @@ $(document).ready(function () {
 
     }
     let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
-    tot.innerHTML = "Total " + total.toString();
+    tot.innerHTML = "Grand Total Ksh " + total.toString();
   });
 
 });

@@ -13,12 +13,12 @@
 
 <body>
   <div class="container">
-    <!-- <div id="header">
+    <div id="header">
       <div>
         <img id="logo" src="assets/logo/logo.jpg" alt="Logo">
       </div>
       <div class="fs50" id="slogan">Perfect has 7 letters. So does Pizzzza.</div>
-    </div> -->
+    </div>
     <div class="row banner">
       <div class="col-md-3">
         <img src="assets/backgrounds/pizza3.jpg" alt="" width="100%" height="100%">
@@ -35,6 +35,7 @@
     </div>
     <div id="pizzaOrder">
       <form id="orderForm">
+        <p class="alert alert-success" id="order-message">You can select multiple pizza collection as much as you need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...</p>
         <h2>Make a Quick Order</h2>
         <div class="row">
           <div class="col-md-3">
@@ -72,10 +73,9 @@
           </div>
         </div>
       </form>
-      <button class="btn btn-success" id="checkOrder">View Order</button>
+      <button class="btn btn-success" id="checkOrder">View Cart</button>
     </div>
-    <p id="order-summary"></p>
-    <table class="table table-sm text-small">
+    <table id="orderTable" class="table table-sm text-small">
       <tr>
         <th>Pizza Size</th>
         <th>Crust</th>

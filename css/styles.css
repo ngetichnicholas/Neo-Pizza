@@ -78,12 +78,11 @@ input[type=text], input[type=email] {
   opacity: 1;
 }
 button {
-  width: 40%;
+  width: 20%;
   margin: 20px 30% 0px 30%;
-  margin-bottom: 10px;
-  color: white;
-  background-color: unset;
-  border: 1px solid white;
+}
+#checkOrder, #order-message,#orderTable{
+  display: none;
 }
 
 @media (max-width: 780px) {
