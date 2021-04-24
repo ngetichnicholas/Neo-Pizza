@@ -26,6 +26,9 @@
   font-size: 50px;
 
 }
+body {
+  background-color: rgb(65,69,72);
+}
 #logo {
   width: 20%;
   height: auto;
