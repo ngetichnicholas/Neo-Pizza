@@ -26,21 +26,21 @@
   font-size: 50px;
 
 }
-body {
-  background-color: rgb(65,69,72);
-}
 #logo {
   width: 20%;
   height: auto;
-  margin: 160px 40% 5px 40%;
+  margin: 100px 40% 5px 40%;
   border-radius: 50%;
 }
 #slogan {
-  margin-top: 50px;
+  margin-top: 80px;
+}
+.banner {
+  margin-top: 20px;
 }
 #header {
   background-image: url("../assets/backgrounds/pizza10.jpg");
-  height: 700px;
+  height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -48,7 +48,7 @@ body {
 }
 @media (min-width: 1200px) {
   .container{
-      max-width: 1460px;
+      max-width: 90%;
   }
 }
 
