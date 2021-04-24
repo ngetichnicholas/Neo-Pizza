@@ -54,8 +54,12 @@
 h2 {
   text-align: center;
 }
+.form-group, .btn-warning {
+width: 100%;
+}
 form {
-  margin: 10px;
+  margin: 10px 100px 0px 0px ;
+  text-align: center;
   align-items: center;
 }
 #mce-responses {
