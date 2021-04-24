@@ -3,7 +3,7 @@ function Pizza(crust, topping) {
   this.crustCost = crust;
   this.toppingCost = topping;
 }
-Pizza.prototype.order = function () {
+Pizza.prototype.myOrder = function () {
   result = this.crustCost + this.toppingCost;
   return result;
 }
@@ -55,7 +55,7 @@ $(document).ready(function () {
         order[key] = fd.get(key).toString();
       }
     }
-    order["total"] = newOrder.order();
+    order["total"] = newOrder.myOrder();
     cart.push(order);
     if (confirm("Confirm you want to add this pizza to your cart")) {
       localStorage.setItem("cart", JSON.stringify(cart));
