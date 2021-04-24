@@ -34,7 +34,7 @@
       </div>
     </div>
     <div id="pizzaOrder">
-      <form id="frm">
+      <form id="orderForm">
         <h2>Make a Quick Order</h2>
         <div class="row">
           <div class="col-md-3">
@@ -60,7 +60,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label>Toping(s)</label><br>
-              <select id="topping" class="form-control" name="toping">
+              <select id="topping" class="form-control" name="topping">
                 <option value="Mushroom">Mushroom</option>
                 <option value="Sausage">Sausage</option>
                 <option value="Green Pepper">Green Pepper</option>
@@ -68,11 +68,11 @@
             </div>
           </div>
           <div class="col-md-3">
-            <button class="btn btn-warning" id="order">Add to cart</button>
+            <button class="btn btn-warning" type="submit" id="order">Add to cart</button>
           </div>
         </div>
       </form>
-      <button class="btn btn-success" id="view-order">View Order</button>
+      <button class="btn btn-success" id="checkOrder">View Order</button>
     </div>
     <p id="order-summary"></p>
     <table class="table table-sm text-small">
@@ -82,7 +82,7 @@
         <th>Topings</th>
         <th>Total</th>
       </tr>
-      <tbody id="our-order">
+      <tbody id="customerOrder">
       </tbody>
       <tfoot class="text-right">
         <tr class="text-right">
