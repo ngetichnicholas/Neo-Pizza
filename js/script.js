@@ -71,7 +71,7 @@ $(document).ready(function () {
       <td>${element['size']}</td>
       <td>${element['crust']}</td>
       <td>${element['topping']}</td>
-      <td>${element['result']}</td>
+      <td>${result}</td>
       </tr>`;
       });
       let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
