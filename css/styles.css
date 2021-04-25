@@ -63,18 +63,18 @@ form {
 #mce-responses {
   display: none;
 }
-#ask,#locate {
+#ask,#locate,#checkOut {
   margin: 40px 25% 15px 25%;
   display: none;
 }
 .alert-dismissible {
   display: none;
 }
+#checkoutButton, #confirm, #locationButton {
+  margin: 15px;
+}
 label {
 font-size: 24px;
-}
-#checkOut {
-  display: none;
 }
 .view-order,#orderTable{
   display: none;
