@@ -100,10 +100,27 @@ $(document).ready(function () {
         $("#message").text("Your shipping cost is Ksh " + shippingCost);
         $("#confirmAlert").show();
         $("#locate").show();
+        $("#userInfo").hide();
       }
-      else {
-        $("#checkOut").show();
+      else if (delivery == "No") {
+        $("#userInfo").show();
+        $("#locate").hide();
       }
+    })
+
+    $("#detailsButton").click(function(event) {
+      event.preventDefault();
+      let userName= $("input#nameOne").val();
+      let phone = $("input#phone1").val();
+      $("#checkoutUser1").show();
+
+      $("#checkout1").click(function(event) {
+        event.preventDefault();
+        $("#aggregatePriceOne").text(total);
+        $("#userName1").text(userName);
+        $("#phoneOne").text(phone);
+        $("#checkouAlertOne").show();
+      })
     })
 
     $("#locationButton").click(function(event) {
@@ -119,7 +136,11 @@ $(document).ready(function () {
       }
       $("#checkoutButton").click(function(event) {
         event.preventDefault();
+        let userName = $("input#name").val();
+        let phone = $("input#phone").val();
         let totalOrderCost = total + shippingCost;
+        $("#userNameTwo").text(userName);
+        $("#phoneTwo").text(phone);
         $("#aggregatePrice").text(total);
         $("#shippingArea").text(shippingLocation);
         $("#shippingCost").text(shippingCost);

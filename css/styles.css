@@ -63,7 +63,7 @@ form {
 #mce-responses {
   display: none;
 }
-#ask,#locate,#checkOut {
+#ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne {
   margin: 40px 25% 15px 25%;
   display: none;
 }

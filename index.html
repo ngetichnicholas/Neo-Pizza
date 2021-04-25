@@ -79,7 +79,9 @@
       </form>
       <div class="row view-order">
         <div id="guide" class="alert alert-success alert-dismissible">
-          <strong>Success!</strong><p >You can select multiple pizza collection one by one. Then click on <strong>View Updated Cart</strong> to generate your new order list...</p>
+          <strong>Success!</strong>
+          <p>You can select multiple pizza collection one by one. Then click on <strong>View Updated Cart</strong> to
+            generate your new order list...</p>
           <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
         <div>
@@ -119,14 +121,20 @@
           <strong>Success!</strong> <span id="message"></span>
           <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
-        <button id="confirm" class="btn btn-primary" type="button">Confirm</button>
+        <button id="confirm" class="btn btn-primary" type="button">Submit</button>
       </form>
-    </div> 
+    </div>
     <div id="locate">
       <h2>Enter your preffered location in the form below</h2>
-      <form >
+      <form>
         <div class="form-group mb-2">
-          <input type="text" class="form-control" id="shippingLocation" value="">
+          <input type="text" class="form-control" id="name" value="" placeholder="Enter your Name here...">
+        </div>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="phone" value="" placeholder="Enter your phone number here...">
+        </div>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="shippingLocation" value="" placeholder="Enter delivery location here">
         </div>
         <div id="locationAlert" class="alert alert-success alert-dismissible">
           <strong>Success!</strong><span id="areaMessage"></span>
@@ -134,6 +142,46 @@
         </div>
         <button id="locationButton" class="btn btn-success" type="button">Submit</button>
       </form>
+    </div>
+    <div id="userInfo">
+      <h2>Enter your details in the form below</h2>
+      <form>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="nameOne" value="" placeholder="Enter your Name here...">
+        </div>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="phone1" value="" placeholder="Enter your phone number here...">
+        </div>
+        <button id="detailsButton" class="btn btn-success" type="button">Submit</button>
+      </form>
+    </div>
+    <div id="checkouAlertOne" class="alert alert-success alert-dismissible">
+      <strong>Success!</strong>
+      <table class="table">
+        <tr>
+          <th scope="col">#</th>
+          <th>Item</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Name:</td>
+          <td><span id="userName1"></span></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Phone Number:</td>
+          <td>Ksh <span id="phoneOne"></span></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Aggregate Order Price</td>
+          <td>Ksh <span id="aggregatePriceOne"></span></td>
+        </tr>
+      </table>
+    </div>
+    <div id="checkoutUser1" class="text-center">
+      <button id="checkout1" class="btn btn-success" type="button">Checkout</button>
     </div>
     <div id="checkOut" class="text-center">
       <div id="checkouAlert" class="alert alert-success alert-dismissible">
@@ -143,6 +191,16 @@
             <th scope="col">#</th>
             <th>Item</th>
             <th>Description</th>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Name:</td>
+            <td><span id="userNameTwo"></span></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Phone Number:</td>
+            <td><span id="phoneTwo"></span></td>
           </tr>
           <tr>
             <th scope="row">1</th>
@@ -165,7 +223,6 @@
             <td>Ksh <span id="totalAmount"></span></td>
           </tr>
         </table>
-        <span id="checkoutMessage"></span>
         <button type="button" class="close" data-dismiss="alert">&times;</button>
       </div>
       <button id="checkoutButton" class="btn btn-success" type="button">Checkout</button>
