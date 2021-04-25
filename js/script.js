@@ -85,7 +85,8 @@ $(document).ready(function () {
 
     }
     $("#orderTable").show();
-    $(".banner").hide();
+    $("#header").hide();
+    $("#delivery").show();
     let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
     tot.innerHTML = "Grand Total Ksh " + total.toString();
   });

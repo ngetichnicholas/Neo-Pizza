@@ -66,6 +66,7 @@ form {
 }
 #delivery {
   margin: 40px 25% 15px 25%;
+  display: none;
 }
 button {
   width: 40%;
