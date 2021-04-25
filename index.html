@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <link rel="icon" type="image/jpg" href="assets/logo/logo.jpg">
@@ -77,12 +79,11 @@
       </form>
       <div class="row view-order">
         <div>
-          <p class="alert alert-success fs24" id="order-message">You can select multiple pizza collection as much as you
-            need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...
+          <p class="alert alert-success fs24" id="order-message">You can select multiple pizza collection one by one. Then click on <strong>View Updated Cart</strong> to generate your new order list...
           </p>
         </div>
         <div>
-          <button class="btn btn-warning" id="checkOrder">View Cart</button>
+          <button class="btn btn-warning" id="checkOrder">View updated Cart</button>
         </div>
       </div>
     </div>
@@ -106,6 +107,10 @@
     <div id="ask">
       <h2>Do you need your Pizza be delivered to you now?</h2>
       <form action="" class="">
+        <div class="alert alert-success alert-dismissible">
+          <strong>Success!</strong> <span id="message"></span>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
         <div class="form-group">
           <lebel for locate>Do you need your Pizza be delivered to you now?</lebel>
           <select name="" id="askForLocation">

@@ -27,18 +27,3 @@ Copyright &copy; 2021 **[Nicholas Ngetich](https://github.com/ngetichnick)**
 ### Questions?
 Twitter: **[@ngetichnichoh](https://twitter.com/ngetichnichoh)**  
 Email: **[nicholas.ngetich@student.moringaschool.com](mailto:nicholas.ngetich@student.moringaschool.com)**
-
-
-
-    <div id="delivery">
-      <form action="">
-        <div class="form-group">
-          <lebel for locate>Do you need your Pizza be delivered to you now?</lebel>
-          <select name="" id="askForLocation">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
-        </div>
-        <button type="button">Submit</button>
-      </form>
-    </div>

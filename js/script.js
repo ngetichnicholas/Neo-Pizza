@@ -88,16 +88,16 @@ $(document).ready(function () {
     $("#orderTable").show();
     $(".banner").hide();
     $("#ask").show();
-    let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
+    const total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
+    const shippingCost = 0.2*total;
     tot.innerHTML = "Grand Total Ksh " + total.toString();
 
     $("#confirm").click(function(event) {
       event.preventDefault();
       let delivery = $("#askForLocation").val();
-  
+      $(".alert-dismissible").show();
       if(delivery === "Yes") {
-        let shippingCost =0.2*total;
-        alert("Your shipping cost will be Ksh " + shippingCost);
+        $("#message").text("Your shipping cost is Ksh " + shippingCost);
         $("#locate").show();
       }
       else {
@@ -109,10 +109,5 @@ $(document).ready(function () {
   $("#ask").click(function(event) {
     event.preventDefault();
     let area = $("input#area").val();
-
-    if(area === "Yes") {
-      let shippingCost =0.2*tot;
-      alert("Your shipping cost will be Ksh " + shippingCost);
-    }
   })
 });
