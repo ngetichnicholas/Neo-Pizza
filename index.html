@@ -137,6 +137,33 @@
     </div>
     <div id="checkOut" class="text-center">
       <button id="checkoutButton" class="btn btn-success" type="button">Checkout</button>
+      <div id="checkouAlert" class="alert alert-success alert-dismissible">
+        <strong>Success!</strong>
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Aggregate Order Price</td>
+            <td><span id="aggregatePrice"></span></td>
+          </tr>
+          <tr>
+            <td>Shipping Location</td>
+            <td><span id="shippingArea"></span></td>
+          </tr>
+          <tr>
+            <td>Shipping Cost</td>
+            <td><span id="shippingCost"></span></td>
+          </tr>
+          <tr>
+            <td>Total Amount</td>
+            <td><span id="totalAmount"></span></td>
+          </tr>
+        </table>
+        <span id="checkoutMessage"></span>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+      </div>
     </div>
   </div>
   <script src="js/jquery-3.6.0.min.js"></script>

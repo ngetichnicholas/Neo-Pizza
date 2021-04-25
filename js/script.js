@@ -117,6 +117,16 @@ $(document).ready(function () {
         $("#checkOut").show();
       }
     })
+
+    $("#checkoutButton").click(function(event) {
+      event.preventDefault();
+      let totalOrderCost = total + shippingCost;
+      $("#aggregatePrice").text(total);
+      $("#shippingArea").text(shippingLocation);
+      $("#shippingCost").text(shippingCost);
+      $("#totalAmount").text(totalOrderCost);
+      $("#checkouAlert").show();
+    })
   });
 
 });
