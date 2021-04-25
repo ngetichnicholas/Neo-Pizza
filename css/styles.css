@@ -65,7 +65,10 @@ form {
   display: none;
 }
 #delivery {
-  margin-top: 40px;
+  margin: 40px 25% 15px 25%;
+}
+button {
+  width: 40%;
 }
 label {
 font-size: 24px;
