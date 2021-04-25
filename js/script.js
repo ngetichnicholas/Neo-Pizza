@@ -90,10 +90,17 @@ $(document).ready(function () {
     $("#ask").show();
     let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
     tot.innerHTML = "Grand Total Ksh " + total.toString();
+
+    $("#confirm").click(function(event) {
+      event.preventDefault();
+      let delivery = $("#askForLocation").val();
+  
+      if(delivery === "Yes") {
+        let shippingCost =0.2*total;
+        alert("Your shipping cost will be Ksh " + shippingCost);
+      }
+    })
   });
 
-  $("#location").click(function(event) {
-    event.preventDefault();
-    let area = $("input#area").val();
-  })
+
 });
