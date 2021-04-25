@@ -73,6 +73,9 @@ form {
 label {
 font-size: 24px;
 }
+#checkOut {
+  display: none;
+}
 .view-order,#orderTable{
   display: none;
 }

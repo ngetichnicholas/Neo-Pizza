@@ -95,19 +95,28 @@ $(document).ready(function () {
     $("#confirm").click(function(event) {
       event.preventDefault();
       let delivery = $("#askForLocation").val();
-      $(".alert-dismissible").show();
       if(delivery === "Yes") {
         $("#message").text("Your shipping cost is Ksh " + shippingCost);
+        $("#confirmAlert").show();
         $("#locate").show();
       }
       else {
-        //
+        $("#checkOut").show();
+      }
+    })
+
+    $("#locationButton").click(function(event) {
+      event.preventDefault();
+      let shippingLocation = $("input#shippingLocation").val();
+      if (shippingLocation.length === 0 ) {
+        alert ("Enter shipping location")
+      }
+      else {
+        $("#areaMessage").text("Your shipping location is " + shippingLocation +". Your order will be delivered to your location soon.");
+        $("#locationAlert").show();
+        $("#checkOut").show();
       }
     })
   });
 
-  $("#ask").click(function(event) {
-    event.preventDefault();
-    let area = $("input#area").val();
-  })
 });
