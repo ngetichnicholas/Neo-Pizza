@@ -67,12 +67,12 @@ form {
 #mce-responses {
   display: none;
 }
-#ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne,#confirmAlert {
-  margin: 40px 20% 15px 20%;
+#ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne,#confirmAlert,#locationAlert {
+  margin: 40px 15% 15px 15%;
   display: none;
 }
 #pizzaOrder,#orderTable {
-  margin: 40px 20% 15px 20%;
+  margin: 40px 15% 15px 15%;
 }
 .alert {
   display: none;
@@ -127,7 +127,7 @@ font-size: 24px;
 }
 #menu ul li a {
   text-decoration: none;
-  color: #907B6E;
+  color: white;
   text-transform: uppercase;
 }
 footer {

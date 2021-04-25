@@ -68,7 +68,6 @@ $(document).ready(function () {
     alert("Your selection have been successfuly added to cart.")
     $(".view-order").show();
     $("#guide").show();
-    $("#header").hide();
   });
 
   checkOrder.addEventListener('click', function () {
@@ -87,7 +86,6 @@ $(document).ready(function () {
 
     }
     $("#orderTable").show();
-    $(".banner").hide();
     $("#ask").show();
     const total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
     const shippingCost = 0.2*total;
