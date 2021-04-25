@@ -76,6 +76,7 @@ button {
   width: 40%;
   margin: 20px 30% 15px 30%;
 }
+
 #checkOrder, #order-message,#orderTable{
   display: none;
 }
