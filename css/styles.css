@@ -64,7 +64,7 @@ form {
 #mce-responses {
   display: none;
 }
-#delivery {
+#ask,#locate {
   margin: 40px 25% 15px 25%;
   display: none;
 }

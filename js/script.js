@@ -67,6 +67,7 @@ $(document).ready(function () {
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Your selection have been successfuly added to cart.")
     $(".view-order").show();
+    $("#header").hide();
   });
 
   checkOrder.addEventListener('click', function () {
@@ -85,10 +86,14 @@ $(document).ready(function () {
 
     }
     $("#orderTable").show();
-    $("#header").hide();
-    $("#delivery").show();
+    $(".banner").hide();
+    $("#ask").show();
     let total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
     tot.innerHTML = "Grand Total Ksh " + total.toString();
   });
 
+  $("#location").click(function(event) {
+    event.preventDefault();
+    let area = $("input#area").val();
+  })
 });

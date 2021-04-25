@@ -77,7 +77,9 @@
       </form>
       <div class="row view-order">
         <div>
-          <p class="alert alert-success fs24" id="order-message">You can select multiple pizza collection as much as you need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...</p>
+          <p class="alert alert-success fs24" id="order-message">You can select multiple pizza collection as much as you
+            need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...
+          </p>
         </div>
         <div>
           <button class="btn btn-warning" id="checkOrder">View Cart</button>
@@ -85,7 +87,7 @@
       </div>
     </div>
     <div id="orderTable">
-      <table  class="table table-sm text-small">
+      <table class="table table-sm text-small">
         <tr>
           <th>Pizza Size</th>
           <th>Crust</th>
@@ -101,20 +103,30 @@
         </tfoot>
       </table>
     </div>
-    <div id="delivery">
+    <div id="ask">
       <h2>Do you need your Pizza be delivered to you now?</h2>
-      <form  action="" class="">
+      <form action="" class="">
         <div class="form-group">
-          <div class="row">
-            <div class="col-md-6">
-              <label for location class="">Location:</label>
-            </div>
-            <div class="col-md-6">
-              <input class="form-control" type="text" id="location" placeholder="Enter your Location here...">
-            </div>
-            <div class="col-md-12 text-center">
-              <button class="btn btn-primary" type="button">Submit</button>
-            </div>
+          <lebel for locate>Do you need your Pizza be delivered to you now?</lebel>
+          <select name="" id="askForLocation">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <button id="confirm" class="btn btn-primary" type="button">Submit</button>
+      </form>
+    </div>
+    <div id="locate" class="form-group">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <label for location class="">Location:</label>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control" type="text" id="area" placeholder="Enter your Location here...">
+          </div>
+          <div class="col-md-12 text-center">
+            <button id="location" class="btn btn-primary" type="button">Submit</button>
           </div>
         </div>
       </form>
