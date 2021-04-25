@@ -101,10 +101,16 @@ $(document).ready(function () {
         $("#confirmAlert").show();
         $("#locate").show();
         $("#userInfo").hide();
+        $(this).hide();
+        $("#ask").hide();
+
       }
       else if (delivery == "No") {
         $("#userInfo").show();
         $("#locate").hide();
+        $(this).hide();
+        $("#ask").hide();
+
       }
     })
 
@@ -113,6 +119,8 @@ $(document).ready(function () {
       let userName= $("input#nameOne").val();
       let phone = $("input#phone1").val();
       $("#checkoutUser1").show();
+      $(this).hide();
+      $("#userInfo").hide();
 
       $("#checkout1").click(function(event) {
         event.preventDefault();
@@ -120,6 +128,7 @@ $(document).ready(function () {
         $("#userName1").text(userName);
         $("#phoneOne").text(phone);
         $("#checkouAlertOne").show();
+        $(this).hide();
       })
     })
 
@@ -133,6 +142,9 @@ $(document).ready(function () {
         $("#areaMessage").text("Your shipping location is " + shippingLocation +". Your order will be delivered to your location soon.");
         $("#locationAlert").show();
         $("#checkOut").show();
+        $("#locate").hide();
+        $(this).hide();
+
       }
       $("#checkoutButton").click(function(event) {
         event.preventDefault();
@@ -146,6 +158,7 @@ $(document).ready(function () {
         $("#shippingCost").text(shippingCost);
         $("#totalAmount").text(totalOrderCost);
         $("#checkouAlert").show();
+        $(this).hide();
       })
     })
   });

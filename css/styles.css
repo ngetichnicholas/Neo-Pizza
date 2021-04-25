@@ -63,14 +63,19 @@ form {
 #mce-responses {
   display: none;
 }
-#ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne {
-  margin: 40px 25% 15px 25%;
+#ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne,#confirmAlert {
+  margin: 40px 20% 15px 20%;
   display: none;
 }
-.alert-dismissible {
+#pizzaOrder,#orderTable {
+  margin: 40px 20% 15px 20%;
+}
+.alert {
   display: none;
 }
-#checkoutButton, #confirm, #locationButton {
+.btn-success, .btn-primary, .btn-warning {
+  width: 300px;
+  height: 60px;
   margin: 15px;
 }
 label {
@@ -82,11 +87,6 @@ font-size: 24px;
 .view-order {
   text-align: center;
   text-align: center;
- padding: 30px 0px 30px 0px;
- margin: 0 15% 0 15%;
-}
-.alert-dismissible {
-margin: 15px 30% 15px 30;;
 }
 @media (max-width: 780px) {
  

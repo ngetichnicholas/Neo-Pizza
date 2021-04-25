@@ -117,15 +117,15 @@
             <option value="No">No</option>
           </select>
         </div>
-        <div id="confirmAlert" class="alert alert-success alert-dismissible">
-          <strong>Success!</strong> <span id="message"></span>
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-        </div>
         <button id="confirm" class="btn btn-primary" type="button">Submit</button>
       </form>
     </div>
+    <div id="confirmAlert" class="alert alert-success alert-dismissible">
+      <strong>Success!</strong> <span id="message"></span>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
     <div id="locate">
-      <h2>Enter your preffered location in the form below</h2>
+      <h2>Enter your details preffered location in the form below</h2>
       <form>
         <div class="form-group mb-2">
           <input type="text" class="form-control" id="name" value="" placeholder="Enter your Name here...">
@@ -156,7 +156,7 @@
       </form>
     </div>
     <div id="checkouAlertOne" class="alert alert-success alert-dismissible">
-      <strong>Success!</strong>
+      <strong>Success! Order Summary</strong>
       <table class="table">
         <tr>
           <th scope="col">#</th>
@@ -179,13 +179,14 @@
           <td>Ksh <span id="aggregatePriceOne"></span></td>
         </tr>
       </table>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
     </div>
     <div id="checkoutUser1" class="text-center">
       <button id="checkout1" class="btn btn-success" type="button">Checkout</button>
     </div>
-    <div id="checkOut" class="text-center">
+    <div id="checkOut">
       <div id="checkouAlert" class="alert alert-success alert-dismissible">
-        <strong>Success!</strong>
+        <strong>Success! Order Summary</strong>
         <table class="table">
           <tr>
             <th scope="col">#</th>
@@ -225,7 +226,9 @@
         </table>
         <button type="button" class="close" data-dismiss="alert">&times;</button>
       </div>
-      <button id="checkoutButton" class="btn btn-success" type="button">Checkout</button>
+      <div class="text-center">
+        <button id="checkoutButton" class="btn btn-success" type="button">Checkout</button>
+      </div>
     </div>
   </div>
   <script src="js/jquery-3.6.0.min.js"></script>
