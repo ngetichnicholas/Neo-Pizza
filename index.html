@@ -78,9 +78,9 @@
         </div>
       </form>
       <div class="row view-order">
-        <div>
-          <p class="alert alert-success fs24 alert-dismissible" id="order-message">You can select multiple pizza collection one by one. Then click on <strong>View Updated Cart</strong> to generate your new order list...
-          </p>
+        <div id="guide" class="alert alert-success alert-dismissible">
+          <strong>Success!</strong><p >You can select multiple pizza collection one by one. Then click on <strong>View Updated Cart</strong> to generate your new order list...</p>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
         <div>
           <button class="btn btn-warning" id="checkOrder">View updated Cart</button>
@@ -105,7 +105,7 @@
       </table>
     </div>
     <div id="ask">
-      <h2>Do you need your Pizza be delivered to you now?</h2>
+      <h2>Pizza Delivery</h2>
       <form action="" class="">
         <div class="form-group">
           <lebel for locate>Do you need your Pizza be delivered to you now?</lebel>
@@ -115,11 +115,11 @@
             <option value="No">No</option>
           </select>
         </div>
-        <button id="confirm" class="btn btn-primary" type="button">Confirm</button>
         <div id="confirmAlert" class="alert alert-success alert-dismissible">
           <strong>Success!</strong> <span id="message"></span>
           <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
+        <button id="confirm" class="btn btn-primary" type="button">Confirm</button>
       </form>
     </div> 
     <div id="locate">
@@ -128,42 +128,47 @@
         <div class="form-group mb-2">
           <input type="text" class="form-control" id="shippingLocation" value="">
         </div>
-        <button id="locationButton" class="btn btn-success" type="button">Submit</button>
         <div id="locationAlert" class="alert alert-success alert-dismissible">
           <strong>Success!</strong><span id="areaMessage"></span>
           <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
+        <button id="locationButton" class="btn btn-success" type="button">Submit</button>
       </form>
     </div>
     <div id="checkOut" class="text-center">
-      <button id="checkoutButton" class="btn btn-success" type="button">Checkout</button>
       <div id="checkouAlert" class="alert alert-success alert-dismissible">
         <strong>Success!</strong>
-        <table>
+        <table class="table">
           <tr>
+            <th scope="col">#</th>
             <th>Item</th>
             <th>Description</th>
           </tr>
           <tr>
+            <th scope="row">1</th>
             <td>Aggregate Order Price</td>
-            <td><span id="aggregatePrice"></span></td>
+            <td>Ksh <span id="aggregatePrice"></span></td>
           </tr>
           <tr>
+            <th scope="row">2</th>
             <td>Shipping Location</td>
             <td><span id="shippingArea"></span></td>
           </tr>
           <tr>
+            <th scope="row">3</th>
             <td>Shipping Cost</td>
-            <td><span id="shippingCost"></span></td>
+            <td>Ksh <span id="shippingCost"></span></td>
           </tr>
           <tr>
+            <th scope="row">4</th>
             <td>Total Amount</td>
-            <td><span id="totalAmount"></span></td>
+            <td>Ksh <span id="totalAmount"></span></td>
           </tr>
         </table>
         <span id="checkoutMessage"></span>
         <button type="button" class="close" data-dismiss="alert">&times;</button>
       </div>
+      <button id="checkoutButton" class="btn btn-success" type="button">Checkout</button>
     </div>
   </div>
   <script src="js/jquery-3.6.0.min.js"></script>

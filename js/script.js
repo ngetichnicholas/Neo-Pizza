@@ -67,6 +67,7 @@ $(document).ready(function () {
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Your selection have been successfuly added to cart.")
     $(".view-order").show();
+    $("#guide").show();
     $("#header").hide();
   });
 
@@ -107,7 +108,7 @@ $(document).ready(function () {
 
     $("#locationButton").click(function(event) {
       event.preventDefault();
-      let shippingLocation = $("input#shippingLocation").val();
+      const shippingLocation = $("input#shippingLocation").val();
       if (shippingLocation.length === 0 ) {
         alert ("Enter shipping location")
       }
@@ -116,16 +117,15 @@ $(document).ready(function () {
         $("#locationAlert").show();
         $("#checkOut").show();
       }
-    })
-
-    $("#checkoutButton").click(function(event) {
-      event.preventDefault();
-      let totalOrderCost = total + shippingCost;
-      $("#aggregatePrice").text(total);
-      $("#shippingArea").text(shippingLocation);
-      $("#shippingCost").text(shippingCost);
-      $("#totalAmount").text(totalOrderCost);
-      $("#checkouAlert").show();
+      $("#checkoutButton").click(function(event) {
+        event.preventDefault();
+        let totalOrderCost = total + shippingCost;
+        $("#aggregatePrice").text(total);
+        $("#shippingArea").text(shippingLocation);
+        $("#shippingCost").text(shippingCost);
+        $("#totalAmount").text(totalOrderCost);
+        $("#checkouAlert").show();
+      })
     })
   });
 
