@@ -66,7 +66,7 @@ $(document).ready(function () {
     cart.push(order);
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Your selection have been successfuly added to cart.")
-    $("#checkOrder, #order-message").show();
+    $(".view-order").show();
   });
 
   checkOrder.addEventListener('click', function () {

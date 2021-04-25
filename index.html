@@ -34,13 +34,12 @@
       </div>
     </div>
     <div id="pizzaOrder">
-      <p class="alert alert-success fs24" id="order-message">You can select multiple pizza collection as much as you need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...</p>
       <form id="orderForm">
         <h2>Make a Quick Order</h2>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="form-group">
-              <label>Size</label><br>
+              <label>Size</label>
               <select id="size" class="form-control" name="size">
                 <option selected value="">---</option>
                 <option value="Small">Small</option>
@@ -49,9 +48,9 @@
               </select><br>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="form-group">
-              <label>Crust</label><br>
+              <label>Crust</label>
               <select id="crust" class="form-control" name="crust"><br>
                 <option selected value="">---</option>
                 <option value="Crispy">Crispy</option>
@@ -60,23 +59,30 @@
               </select><br>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <div class="form-group">
-              <label>Topping(s)</label><br>
+              <label>Topping(s)</label>
               <select id="topping" class="form-control" name="topping">
                 <option selected value="">---</option>
                 <option value="Mushroom">Mushroom</option>
                 <option value="Sausage">Sausage</option>
                 <option value="Green Pepper">Green Pepper</option>
-              </select><br>
+              </select>
             </div>
           </div>
-          <div class="col-md-3">
+          <div>
             <button class="btn btn-success" type="submit" id="orderButton">Add to cart</button>
           </div>
         </div>
       </form>
-      <button class="btn btn-warning" id="checkOrder">View Cart</button>
+      <div class="row view-order">
+        <div>
+          <p class="alert alert-success fs24" id="order-message">You can select multiple pizza collection as much as you need. Choose between the available sizes, crust and toppings for your Pizza. Continue Shopping with Us...</p>
+        </div>
+        <div>
+          <button class="btn btn-warning" id="checkOrder">View Cart</button>
+        </div>
+      </div>
     </div>
     <div id="orderTable">
       <table  class="table table-sm text-small">
@@ -98,14 +104,13 @@
     <div id="delivery">
       <h2>Do you need your Pizza be delivered to you now?</h2>
       <form  action="" class="">
-
         <div class="form-group">
           <div class="row">
             <div class="col-md-4">
-              <lebel for location class="">Location:</lebel>
+              <label for location class="">Location:</label>
             </div>
             <div class="col-md-4">
-              <input readonly class="form-control" type="text" id="location" placeholder="Enter your Location here...">
+              <input class="form-control" type="text" id="location" placeholder="Enter your Location here...">
             </div>
             <div class="col-md-4">
               <button class="btn btn-primary" type="button">Submit</button>

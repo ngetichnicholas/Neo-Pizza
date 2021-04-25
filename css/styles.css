@@ -58,31 +58,32 @@ h2 {
 width: 100%;
 }
 form {
-  margin: 10px 10% 0px 0% ;
   text-align: center;
   align-items: center;
 }
 #mce-responses {
   display: none;
 }
-input[type=text], input[type=email] {
-  width: 100%;
-  margin-bottom: 10px;
-  color: white;
-  background-color: unset;
-  border: 1px solid white;
+#delivery {
+  margin-top: 40px;
 }
-button {
-  width: 40%;
-  margin: 20px 30% 15px 30%;
+label {
+font-size: 24px;
 }
-
-#checkOrder, #order-message,#orderTable{
+#form {
+  text-align: center;
+  align-items: center;
+}
+.view-order,#orderTable{
   display: none;
 }
-#order-message {
-  margin: 10px 20% 10px 20%;
+.view-order {
+  text-align: center;
+  text-align: center;
+ padding: 30px 0px 30px 0px;
+ margin: 0 15% 0 15%;
 }
+
 @media (max-width: 780px) {
  
 }
