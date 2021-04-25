@@ -98,9 +98,21 @@ $(document).ready(function () {
       if(delivery === "Yes") {
         let shippingCost =0.2*total;
         alert("Your shipping cost will be Ksh " + shippingCost);
+        $("#locate").show();
+      }
+      else {
+        //
       }
     })
   });
 
+  $("#ask").click(function(event) {
+    event.preventDefault();
+    let area = $("input#area").val();
 
+    if(area === "Yes") {
+      let shippingCost =0.2*tot;
+      alert("Your shipping cost will be Ksh " + shippingCost);
+    }
+  })
 });
