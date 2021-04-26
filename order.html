@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="icon" type="image/jpg" href="assets/logo/logo.jpg">
+  <title>Neo-Pizza || Prep IP4</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="switch">
+      <button class="btn light-mode" id="light">Light mode</button>
+      <button class="btn dark-mode" id="dark">Dark mode</button>
+    </div>
+    <div id="header">
+      <div class="row">
+        <div class="col-md-6">
+          <img id="icon" src="assets/logo/download.png" alt="">
+        </div>
+        <div class="col-md-6" id="menu">
+          <ul>
+            <div class="row">
+              <div class="col-md-3">
+                <li><a href="index.html">Home</a></li>
+              </div>
+              <div class="col-md-3">
+                <li><a href="contact.html">Contact</a></li>
+              </div>
+              <div class="col-md-3">
+                <li><a href="order.html">Order</a></li>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img id="logo" src="assets/logo/logo.jpg" alt="Logo">
+      </div>
+      <div class="fs50" id="slogan">Perfect has 7 letters. So does Pizzzza.</div>
+    </div>
+    <div id="pizzaOrder">
+      <form id="orderForm">
+        <h2>Make a Quick Order</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Size</label>
+              <select id="size" class="form-control" name="size">
+                <option selected value="">---</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+              </select><br>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Crust</label>
+              <select id="crust" class="form-control" name="crust"><br>
+                <option selected value="">---</option>
+                <option value="Crispy">Crispy</option>
+                <option value="Stuffed">Stuffed</option>
+                <option value="Gluten-free">Gluten-free</option>
+              </select><br>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Topping(s)</label>
+              <select id="topping" class="form-control" name="topping">
+                <option selected value="">---</option>
+                <option value="Mushroom">Mushroom</option>
+                <option value="Sausage">Sausage</option>
+                <option value="Green Pepper">Green Pepper</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-12 text-center">
+            <button class="btn btn-success" type="submit" id="orderButton">Add to cart</button>
+          </div>
+        </div>
+      </form>
+      <div class="row view-order">
+        <div id="guide" class="alert alert-success alert-dismissible">
+          <strong>Success!</strong>
+          <p>You can select multiple pizza collection one by one. Then click on <strong>View Updated Cart</strong> to
+            generate your new order list...</p>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+        <div>
+          <button class="btn btn-warning" id="checkOrder">View updated Cart</button>
+        </div>
+      </div>
+    </div>
+    <div id="orderTable">
+      <table class="table table-dark">
+        <tr>
+          <th>Pizza Size</th>
+          <th>Crust</th>
+          <th>Topings</th>
+          <th>Total</th>
+        </tr>
+        <tbody id="customerOrder">
+        </tbody>
+        <tfoot class="text-right">
+          <tr class="text-right">
+            <td colspan="4" id="total"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div id="ask">
+      <h2>Pizza Delivery</h2>
+      <form action="" class="">
+        <div class="form-group">
+          <lebel for locate>Do you need your Pizza be delivered to you now?</lebel>
+          <select name="" id="askForLocation">
+            <option selected value="">---</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <button id="confirm" class="btn btn-primary" type="button">Submit</button>
+      </form>
+    </div>
+    <div id="confirmAlert" class="alert alert-success alert-dismissible">
+      <strong>Success!</strong> <span id="message"></span>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    <div id="locate">
+      <h2>Enter your details preffered location in the form below</h2>
+      <form>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="name" value="" placeholder="Enter your Name here...">
+        </div>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="phone" value="" placeholder="Enter your phone number here...">
+        </div>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="shippingLocation" value="" placeholder="Enter delivery location here">
+        </div>
+        <button id="locationButton" class="btn btn-success" type="button">Submit</button>
+      </form>
+    </div>
+    <div id="locationAlert" class="alert alert-success alert-dismissible">
+      <strong>Success!</strong><span id="areaMessage"></span>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    <div id="userInfo">
+      <h2>Enter your details in the form below</h2>
+      <form>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="nameOne" value="" placeholder="Enter your Name here...">
+        </div>
+        <div class="form-group mb-2">
+          <input type="text" class="form-control" id="phone1" value="" placeholder="Enter your phone number here...">
+        </div>
+        <button id="detailsButton" class="btn btn-success" type="button">Submit</button>
+      </form>
+    </div>
+    <div id="checkouAlertOne" class="alert alert-success alert-dismissible">
+      <strong>Success! Order Summary</strong>
+      <table class="table table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th>Item</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <th scope="row">1</th>
+          <td>Name:</td>
+          <td><span id="userName1"></span></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Phone Number:</td>
+          <td>Ksh <span id="phoneOne"></span></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Aggregate Order Price</td>
+          <td>Ksh <span id="aggregatePriceOne"></span></td>
+        </tr>
+      </table>
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    <div id="checkoutUser1" class="text-center">
+      <button id="checkout1" class="btn btn-success" type="button">Checkout</button>
+    </div>
+    <div id="checkOut">
+      <div id="checkouAlert" class="alert alert-success alert-dismissible">
+        <strong>Success! Order Summary</strong>
+        <table class="table table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th>Item</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Name:</td>
+            <td><span id="userNameTwo"></span></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Phone Number:</td>
+            <td><span id="phoneTwo"></span></td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Aggregate Order Price</td>
+            <td>Ksh <span id="aggregatePrice"></span></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Shipping Location</td>
+            <td><span id="shippingArea"></span></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Shipping Cost</td>
+            <td>Ksh <span id="shippingCost"></span></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Total Amount</td>
+            <td>Ksh <span id="totalAmount"></span></td>
+          </tr>
+        </table>
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+      </div>
+      <div class="text-center">
+        <button id="checkoutButton" class="btn btn-success" type="button">Checkout</button>
+      </div>
+    </div>
+ <!-- footer section -->
+ <div id="footer">
+  <div id="social">
+    <ul>
+      <li><a href="https://www.facebook.com/kiprotich.korgoren "  target="_blank"><img src="images/fbicon.png" width="40px" height="40px" alt=""></a></li>
+      <li><a href="https://twitter.com/ngetichnichoh" target="_blank"><img src="images/twittericon.png" alt=""width="40px" height="40px"></a></li>
+      <li><a href="mailto:nicholas.ngetich@students.dkut.ac.ke" target="_blank"><img src="images/gmailicon.png" alt=""width="40px" height="40px"></a></li>
+    </ul>
+  </div>
+  <div id="copyright">
+    <p>© 2021 Nicholas Ngetich</p>
+  </div>
+</div>
+<!-- end of footer section -->
+  </div>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

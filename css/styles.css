@@ -130,24 +130,46 @@ font-size: 24px;
   color: white;
   text-transform: uppercase;
 }
-footer {
-  height: 60px;
-  background-color: #F7F7F7;
+#footer {
+  background-color: #333333;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   align-items: center;
-  padding-top: 20px;
-  width: 100%;
+  color: white;
+}
+#social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+}
+#social ul li {
+  list-style: none;
+  margin-left: 20px;
 }
 .dark-theme {
   background-color: #322820;
 }
 
 @media (max-width: 780px) {
+  .banner img {
+    height: auto;
+    border-radius: 8px;
+  }
+
  
 }
 @media screen  and (min-width:0px) and (max-width: 500px) {
   
 }
 @media screen  and (min-width:500px) and (max-width: 1000px) {
- 
+  .banner img {
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0px 0px 0px;
+  }
 }
