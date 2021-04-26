@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+}
 .fs12 {
   font-size: 12px;
 }
@@ -39,12 +44,14 @@
   margin-top: 20px;
 }
 .banner img {
-  height: 150px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 40px;
   border-radius: 8px;
 }
 #header {
   background-image: url("../assets/backgrounds/pizza10.jpg");
-  height: 600px;
+  height: 700px;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -52,7 +59,7 @@
 }
 @media (min-width: 1200px) {
   .container{
-      max-width: 75%;
+      max-width: 90%;
   }
 }
 h2 {
@@ -95,32 +102,6 @@ font-size: 24px;
 #icon {
   float: left;
 }
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-.light-mode {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-}
-.dark-mode:hover {
-  color: white;
-}
-.dark-background {
-  background-color: black;
-  color: white;
-}
-.light-background {
-  background-color: white;
-  color: black;
-}
-#switch {
-  float: right;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
 #menu ul {
   list-style: none;
   padding-top: 30px;
@@ -129,6 +110,11 @@ font-size: 24px;
   text-decoration: none;
   color: white;
   text-transform: uppercase;
+}
+#menu ul li a:hover {
+  color: white;
+  background-color: #C0CF4D;
+  padding: 15px;
 }
 #footer {
   background-color: #333333;
@@ -140,6 +126,7 @@ font-size: 24px;
   text-align: center;
   align-items: center;
   color: white;
+  margin-top: 30px;
 }
 #social ul {
   display: flex;
@@ -161,16 +148,22 @@ font-size: 24px;
     border-radius: 8px;
   }
   .btn-success, .btn-primary, .btn-warning {
-    width: 100%;
+    width: 90%;
     height: 60px;
     margin: 15px;
   }
   .container{
     max-width: 100%;
 }
-
- 
+#ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne,#confirmAlert,#locationAlert {
+  margin: 30px 5% 5px 5%;
+  display: none;
 }
+#pizzaOrder,#orderTable {
+  margin: 30px 5% 5px 5%;
+}
+}
+
 @media screen  and (min-width:0px) and (max-width: 500px) {
   
 }
@@ -187,5 +180,12 @@ font-size: 24px;
   }
   .container{
     max-width: 90%;
-}
+  }
+  #ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne,#confirmAlert,#locationAlert {
+    margin: 30px 10% 10px 10%;
+    display: none;
+  }
+  #pizzaOrder,#orderTable {
+    margin: 30px 10% 10px 10%;
+  }
 }
