@@ -2,7 +2,7 @@
 ## Author
 Nicholas Ngetich
 ## Description
-
+This is a web application project for ordering Pizza online. It allows a customer to select different combination of pizza ingredients like crust and toppings. The customer can also select the size and add as many orders as possible to cart.
 ![alt text]()
 ### Prerequisites
 You need to have git installed
