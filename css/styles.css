@@ -9,7 +9,6 @@ body {
 * {
   box-sizing: border-box; 
 }
-
 .container {
   margin: 50px; 
   font-family: 'Merriweather', sans-serif;
@@ -192,6 +191,10 @@ select {
     margin: 10px 10px 10px 10px;
     table-layout:fixed;
     word-wrap: break-word;
+  }
+  #links div  {
+    display: flex;
+    flex-direction: row;
   }
   #sm-footer {
     padding: 25px 2% 25px 2%;
