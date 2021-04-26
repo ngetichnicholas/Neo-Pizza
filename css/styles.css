@@ -78,7 +78,7 @@ form {
   margin: 40px 15% 15px 15%;
   display: none;
 }
-#pizzaOrder,#orderTable {
+#pizzaOrder,#orderTable,#mc_embed_signup {
   margin: 40px 15% 15px 15%;
 }
 .alert {
@@ -138,10 +138,12 @@ font-size: 24px;
   list-style: none;
   margin-left: 20px;
 }
-.dark-theme {
-  background-color: #322820;
+#signup_scroll {
+  text-align: left;
 }
-
+#signup_scroll .text-centre {
+  text-align: center;
+}
 @media (max-width: 780px) {
   .banner img {
     height: auto;
