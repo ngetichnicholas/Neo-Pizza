@@ -71,9 +71,6 @@ width: 100%;
 form {
   text-align: center;
 }
-#mce-responses {
-  display: none;
-}
 #ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne,#confirmAlert,#locationAlert {
   margin: 40px 15% 15px 15%;
   display: none;
