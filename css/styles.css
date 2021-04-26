@@ -95,7 +95,10 @@ a, a:visited {
 img{
   border-radius: 8px;
 }
-h2 {
+label,th {
+  color: #BFCD5A;
+}
+h2,h1 {
   text-align: center;
 }
 .form-group {
@@ -148,7 +151,7 @@ select {
 }
 #menu ul li a:hover {
   color: white;
-  background-color: #C0CF4D;
+  color: #C0CF4D;
   padding: 15px;
 }
 #social ul {
