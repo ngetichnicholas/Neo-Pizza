@@ -1,9 +1,132 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#content {
+  margin: 15px 5% 0px 5%;
+}
 body {
+  font-family: "Helvetica Neue",sans-serif;
+  font-weight: lighter;
   background-color: black;
   color: white;
   font-size: 24px;
-  text-align: justify
+  text-align: justify;
 }
+
+header {
+  background-image: url("../assets/backgrounds/pizza10.jpg");
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.logo {
+  line-height: 60px;
+  position: fixed;
+  float: left;
+  margin: 16px 46px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+#logo {
+  width: 20%;
+  height: auto;
+  margin: 150px 40% 5px 40%;
+  border-radius: 50%;
+}
+#slogan {
+  margin-top: 40px;
+}
+nav {
+  position: fixed;
+  width: 100%;
+  line-height: 60px;
+}
+
+nav ul {
+  line-height: 60px;
+  list-style: none;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: right;
+  margin: 0;
+  padding-right: 40px;
+  transition: 1s;
+}
+
+nav.black ul {
+  background: #000;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 16px 40px;;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #BFCD5A;
+}
+
+.menu-icon {
+  line-height: 60px;
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+@media(max-width: 786px) {
+
+  .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+  }
+
+  nav ul {
+        max-height: 0px;
+        background: #000;
+  }
+
+  nav.black ul {
+        background: #000;
+  }
+
+  .showing {
+        max-height: 34em;
+  }
+
+  nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+  }
+
+  .menu-icon {
+        display: block;
+  }
+
+}
+
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto+Slab&display=swap');
 
 * {
@@ -58,15 +181,6 @@ a, a:visited {
   font-size: 50px;
 
 }
-#logo {
-  width: 20%;
-  height: auto;
-  margin: 40px 40% 5px 40%;
-  border-radius: 50%;
-}
-#slogan {
-  margin-top: 40px;
-}
 .banner {
   margin-top: 20px;
 }
@@ -76,17 +190,10 @@ a, a:visited {
   margin-bottom: 40px;
   border-radius: 8px;
 }
-#header {
-  background-image: url("../assets/backgrounds/pizza10.jpg");
-  height: 700px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
-  color: white;
-}
 @media (min-width: 1200px) {
   .container{
-      max-width: 90%;
+      max-width: 100%;
+      margin: 0;
   }
 }
 #mce-responses {
@@ -139,6 +246,10 @@ select {
 }
 #icon {
   float: left;
+}
+.navbar navbar-expand-md navbar-light bg-dark {
+  background: transparent;
+  background-color: unset;
 }
 #menu ul {
   list-style: none;
@@ -199,6 +310,11 @@ select {
     display: flex;
     flex-direction: row;
   }
+  .btn-success, .btn-primary, .btn-warning {
+    width: 60%;
+    height: 60px;
+    margin: 20px 2% 5px 2%;
+  }
   #sm-footer {
     padding: 25px 2% 25px 2%;
     width: 100%;
@@ -225,7 +341,7 @@ select {
   #icon {
     display: none;
   }
-  #header {
+  header {
     height: auto;
     background-size: cover;
   }
@@ -253,7 +369,7 @@ select {
   #logo {
     width: 50%;
     height: auto;
-    margin: 20px 5% 5px 5%;
+    margin: 120px 5% 5px 5%;
     border-radius: 50%;
   }
   #slogan {
@@ -275,12 +391,21 @@ select {
     border-radius: 8px;
     margin: 15px 0px 0px 0px;
   }
+  #icon {
+    display: none;
+  }
+  #logo {
+    width: 50%;
+    height: auto;
+    margin: 120px 5% 5px 5%;
+    border-radius: 50%;
+  }
   select {
     width: 90%;
   }
   #sm-footer {
     padding: 25px 2% 25px 2%;
-    width: 90%;
+    width: 100%;
   }
   .btn-success, .btn-primary, .btn-warning {
     width: 60%;
@@ -296,5 +421,10 @@ select {
   }
   #pizzaOrder,#orderTable {
     margin: 30px 10% 10px 10%;
+  }
+  .container{
+    max-width: 100%;
+    padding: 0px;
+    margin: 5px;
   }
 }
