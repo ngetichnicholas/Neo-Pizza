@@ -15,25 +15,22 @@ body {
   font-family: 'Merriweather', sans-serif;
   font-size: 1.5rem; 
 }
-
 #sm-footer {
   bottom: 0; 
   background-color: black; 
-  width: 100vw;
-  padding: 25px 20% 25px 20%; 
+  width: 100%;
+  padding: 25px 15% 25px 20%; 
   height: 15vh; 
   display: flex;
   justify-content: space-between;
   font-size: 2rem; 
   font-family: 'Roboto Slab', sans-serif; 
 }
-
 a, a:visited {
   color: white; 
   text-decoration: none;
   padding: 10px; 
 }
-
 .fs12 {
   font-size: 12px;
 }
@@ -135,6 +132,9 @@ font-size: 24px;
   text-align: center;
   text-align: center;
 }
+select {
+  width: 100%;
+}
 #icon {
   float: left;
 }
@@ -152,27 +152,11 @@ font-size: 24px;
   background-color: #C0CF4D;
   padding: 15px;
 }
-#footer {
-  background-color: #333333;
-  height: 200px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  color: white;
-  margin-top: 30px;
-}
 #social ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   list-style: none;
-}
-#social ul li {
-  list-style: none;
-  margin-left: 20px;
 }
 #signup_scroll {
   text-align: left;
@@ -209,6 +193,32 @@ font-size: 24px;
     table-layout:fixed;
     word-wrap: break-word;
   }
+  #sm-footer {
+    padding: 25px 2% 25px 2%;
+    width: 100%;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  a, a:visited {
+    color: white; 
+    text-decoration: none;
+    padding: 10px; 
+  }
+  #mc_embed_signup {
+    width: 90%;
+    margin: 5%;
+  }
+  #pizzaOrder,#orderTable {
+    margin: 20px 2% 5px 2%;
+  }
+
+  select {
+    width: 90%;
+  }
+  #icon {
+    display: none;
+  }
   #header {
     height: auto;
     background-size: cover;
@@ -230,20 +240,6 @@ font-size: 24px;
   #ask,#locate,#checkOut, #userInfo, #checkoutUser1,#checkouAlertOne,#confirmAlert,#locationAlert {
     margin: 20px 2% 10px 2%;
     display: none;
-  }
-  #footer {
-    background-color: #333333;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 30px;
-  }
-  #social ul {
-    justify-content: space-around;
-  }
-  #social ul li {
-    margin-left: unset;
   }
   #slogan {
     font-size: 25px;
@@ -272,6 +268,13 @@ font-size: 24px;
     height: auto;
     border-radius: 8px;
     margin: 15px 0px 0px 0px;
+  }
+  select {
+    width: 90%;
+  }
+  #sm-footer {
+    padding: 25px 2% 25px 2%;
+    width: 90%;
   }
   .btn-success, .btn-primary, .btn-warning {
     width: 60%;
