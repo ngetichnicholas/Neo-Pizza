@@ -12,6 +12,7 @@ Pizza.prototype.myOrder = function () {
 }
 
 
+
 //User Interface Logic
 $(document).ready(function () {
   let orderForm = document.querySelector('#orderForm');
@@ -98,7 +99,7 @@ $(document).ready(function () {
     $("#ask").show();
     const total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
     const shippingCost = 0.2*total;
-    tot.innerHTML = "Grand Total Ksh " + total.toString();
+    tot.innerHTML = "Aggregate Order Price Ksh " + total.toString();
 
     $("#confirm").click(function(event) {
       event.preventDefault();
@@ -124,10 +125,15 @@ $(document).ready(function () {
       event.preventDefault();
       let userName= $("input#nameOne").val();
       let phone = $("input#phone1").val();
-      $("#checkoutUser1").show();
-      $(this).hide();
-      $("#userInfo").hide();
-
+      if (userName.length === 0 || phone.length === 0) {
+        alert("Enter all fields before submiting!!!")
+      }
+      else {
+        $("#checkoutUser1").show();
+        $(this).hide();
+        $("#userInfo").hide();
+      }
+      
       $("#checkout1").click(function(event) {
         event.preventDefault();
         $("#aggregatePriceOne").text(total);
@@ -143,7 +149,7 @@ $(document).ready(function () {
       const shippingLocation = $("input#shippingLocation").val();
 
       if (shippingLocation.length === 0 ) {
-        alert ("Enter shipping location")
+        alert ("Enter all fields before submiting!!!")
       }
       else {
         $("#areaMessage").text("Your shipping location is " + shippingLocation +". Your order will be delivered to your location soon.");

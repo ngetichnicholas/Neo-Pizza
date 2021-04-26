@@ -160,7 +160,7 @@ select {
   justify-content: space-around;
   list-style: none;
 }
-#signup_scroll {
+#signup_scroll,.form-group {
   text-align: left;
 }
 #signup_scroll .text-centre {
