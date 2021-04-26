@@ -310,6 +310,9 @@ select {
     display: flex;
     flex-direction: row;
   }
+  #content {
+    margin: 15px 2px 0px 2px;
+  }
   .btn-success, .btn-primary, .btn-warning {
     width: 60%;
     height: 60px;
@@ -421,10 +424,5 @@ select {
   }
   #pizzaOrder,#orderTable {
     margin: 30px 10% 10px 10%;
-  }
-  .container{
-    max-width: 100%;
-    padding: 0px;
-    margin: 5px;
   }
 }
