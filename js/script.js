@@ -21,13 +21,13 @@ $(document).ready(function () {
   let cart = [];
   orderForm.addEventListener("submit", function (event) {
     event.preventDefault();
+    $(this).closest('form').find("input[type=text], textarea").val("");
     let size = $("#size").val();
     let crust = $("#crust").val();
     let topping = $("#topping").val();
     let toppingCost = 0;
     let crustCost = 0;
     let sizeValue =0;
-
     if (size.length === 0 || crust.length === 0 || topping.length === 0 ) {
       alert("Select from all the fiels before adding to cart!!! ")
       throw new Error;
@@ -64,7 +64,6 @@ $(document).ready(function () {
       sizeValue += 300;
       toppingCost = toppingCost * 2.5
     }
-
     let newOrder = new Pizza(sizeValue, crustCost, toppingCost);
     let fd = new FormData(orderForm);
     let order = {}
@@ -84,6 +83,8 @@ $(document).ready(function () {
     alert("Your selection have been successfuly added to cart.")
     $(".view-order").show();
     $("#guide").show();
+    let form1 =document.getElementsByName("orderForm")[0];
+    form1.reset();
   });
 
   checkOrder.addEventListener('click', function () {
@@ -100,13 +101,15 @@ $(document).ready(function () {
       });
     }
 
+    //print order summary to a table
     $("#orderTable").show();
     $("#ask").show();
     const total = cart.reduce((sum, item) => sum + (parseInt(item['total'])), 0);
     const shippingCost = 0.2*total;
     tot.innerHTML = "Aggregate Order Price Ksh " + total.toString();
 
-    $("#confirm").click(function(event) {
+    //confirmation for delivery option
+    $("form#confirm").submit(function(event) {
       event.preventDefault();
       let delivery = $("#askForLocation").val();
 
@@ -126,6 +129,7 @@ $(document).ready(function () {
       }
     })
 
+    //capture details from user with no delivery
     $("#detailsButton").click(function(event) {
       event.preventDefault();
       let userName= $("input#nameOne").val();
@@ -139,6 +143,7 @@ $(document).ready(function () {
         $("#userInfo").hide();
       }
       
+      //show order summary on checkout without delivery
       $("#checkout1").click(function(event) {
         event.preventDefault();
         $("#aggregatePriceOne").text(total);
@@ -149,6 +154,7 @@ $(document).ready(function () {
       })
     })
 
+    //Receive inputs from customer with delivery
     $("#locationButton").click(function(event) {
       event.preventDefault();
       const shippingLocation = $("input#shippingLocation").val();
@@ -165,7 +171,7 @@ $(document).ready(function () {
         $("#locate").hide();
         $(this).hide();
       }
-      
+      //Display order summary on checkout with delivery
       $("#checkoutButton").click(function(event) {
         event.preventDefault();
         let totalOrderCost = total + shippingCost;
@@ -182,7 +188,13 @@ $(document).ready(function () {
   });
 });
 
-
+//contact form clearing
+$(document).ready(function() {
+  $("form#mc-embedded-subscribe-form").submit(function() {
+    let form = document.getElementsByName("mc-embedded-subscribe-form")[0];
+    form.reset();
+  })
+})
 //Header nav Jquery
 $(document).ready(function() {
   $(".menu-icon").on("click", function() {
