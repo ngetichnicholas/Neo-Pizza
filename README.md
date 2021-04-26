@@ -19,7 +19,7 @@ To access this project on your local files, you can clone it using these steps
 - CSS
 - GIT
 ### Live Site
-View [live](https://ngetichnick.github.io/Neo-Pizza/contact.html)
+View [live](https://ngetichnick.github.io/Neo-Pizza/index.html)
 ### License
 This project is under:  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE)  

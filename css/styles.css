@@ -62,6 +62,9 @@ body {
       max-width: 90%;
   }
 }
+#mce-responses {
+  color: #155724;
+}
 h2 {
   text-align: center;
 }
