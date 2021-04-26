@@ -1,12 +1,12 @@
 //Business Logic
 function Pizza(size, crust, topping) {
-  this.size = size;
+  this.sizeValue = size;
   this.crustCost = crust;
   this.toppingCost = topping;
 }
 
 Pizza.prototype.myOrder = function () {
-  result = this.crustCost + this.toppingCost;
+  result = this.sizeValue + this.crustCost + this.toppingCost;
   return result;
 
 }
@@ -26,42 +26,46 @@ $(document).ready(function () {
     let topping = $("#topping").val();
     let toppingCost = 0;
     let crustCost = 0;
+    let sizeValue =0;
 
     if (size.length === 0 || crust.length === 0 || topping.length === 0 ) {
       alert("Select from all the fiels before adding to cart!!! ")
       throw new Error;
     }
     if (crust == "Crispy") {
-      crustCost = crustCost + 200;
-    } 
-    else if (crust == "Stuffed") {
       crustCost = crustCost + 250;
     } 
-    else if (crust == "Gluten-free") {
+    else if (crust == "Stuffed") {
       crustCost = crustCost + 300;
+    } 
+    else if (crust == "Gluten-free") {
+      crustCost = crustCost + 350;
     }
 
     if (topping == "Mushroom") {
-      toppingCost = toppingCost + 150;
+      toppingCost = toppingCost + 100;
     } 
     else if (topping == "Sausage") {
-      toppingCost = toppingCost + 200;
+      toppingCost = toppingCost + 150;
     } 
     else if (topping == "Green Pepper") {
-      toppingCost = toppingCost + 250;
+      toppingCost = toppingCost + 200;
     }
 
     if (size == "Small") {
+      sizeValue += 200;
       toppingCost = toppingCost * 1.5;
     } 
     else if (size == "Medium") {
+      sizeValue += 250;
       toppingCost = toppingCost * 2;
     } 
     else if (size == "Large") {
+      sizeValue += 300;
       toppingCost = toppingCost * 2.5
     }
 
-    let newOrder = new Pizza(size, crustCost, toppingCost);
+    let newOrder = new Pizza(sizeValue, crustCost, toppingCost);
     let fd = new FormData(orderForm);
     let order = {}
 
@@ -69,11 +73,12 @@ $(document).ready(function () {
       if (fd.get(key).toString().length > 0) {
         order[key] = fd.get(key).toString();
       }
-    }2
+    }
 
     order.toppingCost = toppingCost;
     order.crustCost = crustCost;
-    order["total"] = (order["toppingCost"] + order["crustCost"]);
+    order.sizeValue = sizeValue;
+    order["total"] = (order["toppingCost"] + order["crustCost"] + order["sizeValue"]);
     cart.push(order);
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Your selection have been successfuly added to cart.")
@@ -90,7 +95,7 @@ $(document).ready(function () {
       <td>${element['size']}</td>
       <td>${element['crust']}</td>
       <td>${element['topping']}</td>
-      <td>${(element['toppingCost']) + (element['crustCost'])}</td>
+      <td>${(element['toppingCost']) + (element['crustCost']) + (element['sizeValue'])}</td>
       </tr>`;
       });
     }
@@ -147,12 +152,14 @@ $(document).ready(function () {
     $("#locationButton").click(function(event) {
       event.preventDefault();
       const shippingLocation = $("input#shippingLocation").val();
+      let userName = $("input#name").val();
+      let phone = $("input#phone").val();
 
-      if (shippingLocation.length === 0 ) {
+      if (shippingLocation.length === 0 || userName.length ===0 || phone.length ===0) {
         alert ("Enter all fields before submiting!!!")
       }
       else {
-        $("#areaMessage").text("Your shipping location is " + shippingLocation +". Your order will be delivered to your location soon.");
+        $("#areaMessage").text("Your shipping location is " + shippingLocation +". This order will be delivered to your location after you checkout.");
         $("#locationAlert").show();
         $("#checkOut").show();
         $("#locate").hide();
@@ -161,8 +168,6 @@ $(document).ready(function () {
       
       $("#checkoutButton").click(function(event) {
         event.preventDefault();
-        let userName = $("input#name").val();
-        let phone = $("input#phone").val();
         let totalOrderCost = total + shippingCost;
         $("#userNameTwo").text(userName);
         $("#phoneTwo").text(phone);
