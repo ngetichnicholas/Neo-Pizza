@@ -11,8 +11,6 @@ Pizza.prototype.myOrder = function () {
 
 }
 
-
-
 //User Interface Logic
 $(document).ready(function () {
   let orderForm = document.querySelector('#orderForm');
@@ -54,15 +52,12 @@ $(document).ready(function () {
 
     if (size == "Small") {
       sizeValue += 200;
-      toppingCost = toppingCost * 1.5;
     } 
     else if (size == "Medium") {
       sizeValue += 250;
-      toppingCost = toppingCost * 2;
     } 
     else if (size == "Large") {
       sizeValue += 300;
-      toppingCost = toppingCost * 2.5
     }
     let newOrder = new Pizza(sizeValue, crustCost, toppingCost);
     let fd = new FormData(orderForm);
